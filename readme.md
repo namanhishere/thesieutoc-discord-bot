@@ -14,7 +14,7 @@ Bước 1: Download code về. Có thể sử dụng git clone để tăng sự 
 Bước 2: Nhập các environment variable (xem tại mục 3)  
 Bước 3: Sử dụng lệnh download thư viện về ``npm install``  
 Bước 4: Tạo table serverinformation ( xem tại mục 4)
-Bước 5: Sử dụng lệnh ```npm start`` để khởi chạy
+Bước 5: Sử dụng lệnh ```node index.js`` để khởi chạy
 
 Hoàn toàn có thể sử dụng Docker. Khi này, bạn có thể thay đổi env trong Dockerfile và thay đổi mật khẩu database trong docker-compose.yml
 
