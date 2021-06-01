@@ -130,6 +130,6 @@ fs.readdir("./event/", (err, files) => {
 
 app.use("/", require("./callback").route)
 
-app.get("/:i", (req,res)=>{
+app.get("/", (req,res)=>{
     res.json({message:"Đây là web của bot, bot không hỗ trợ method này ^^"})
 })
