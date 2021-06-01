@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
     database.query(`SELECT * FROM serverinfomation WHERE serverID = ${message.guild.id}`,function (error, data) {
         if(data.length === 0){
             console.log("test")
-            database.query(`INSERT INTO serverinfomation (serverID,serverRoles) VALUE ('${message.guild.id}','Non-Verify')`)
+            database.query(`INSERT INTO serverinfomation (serverID,serverRoles,prefix,logchanel) VALUE ('${message.guild.id}','Non-Verify','!','${message.channel.id}')`)
             database.query(`CREATE TABLE s${message.guild.id} (
                 ID varchar(255),
                 Coin varchar(255)
@@ -17,7 +17,6 @@ module.exports.run = async (client, message, args) => {
             .addField('ID Server của bạn là', message.guild.id)
             .addField('APIs Keys của bạn là', "Chưa thiết lập")
             .addField("Cài đặt chuyển hướng (Callback) về địa chỉ:",`https://2y2c.namanhishere.com/${message.guild.id}`)
-            .addField("Để xác thực vui lòng sử dụng lệnh !verify [ID]","Yêu cầu của bạn sẽ được xem xét và duyệt trong khoảng thời gian sớm nhất.")
             .setFooter('Một sản phẩm của MokaTeam')
             message.member.send(embed);
         }else{
@@ -27,7 +26,6 @@ module.exports.run = async (client, message, args) => {
             .addField('ID Server của bạn là', message.guild.id)
             .addField('APIs Keys của bạn là', data[0].serverAPIkeys || "Chưa thiết lập")
             .addField("Cài đặt chuyển hướng (Callback) về địa chỉ:",`https://2y2c.namanhishere.com/${message.guild.id}`)
-            .addField("Để xác thực vui lòng sử dụng lệnh !verify [ID]","Yêu cầu của bạn sẽ được xem xét và duyệt trong khoảng thời gian sớm nhất.")
             .setFooter('Một sản phẩm của MokaTeam')
         message.member.send(exampleEmbed);
         }
