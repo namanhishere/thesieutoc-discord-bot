@@ -6,7 +6,7 @@
 
 ### 2. Cách chạy
 Sử dụng nodejs thông thường   
-Yêu cầu: Cần có Nodejs version từ 12 trở lên, mysql database
+Yêu cầu: Cần có Nodejs version từ 12 trở lên, mysql database  
 Khuyến nghị: Kiểm tra source code để đảm bảo không có RAT
 
 
@@ -16,7 +16,7 @@ Bước 3: Sử dụng lệnh download thư viện về ``npm install``
 Bước 4: Tạo table serverinformation ( xem tại mục 4)
 Bước 5: Sử dụng lệnh ``node index.js`` để khởi chạy
 
-Hoàn toàn có thể sử dụng Docker. Khi này, bạn có thể thay đổi env trong Dockerfile và thay đổi mật khẩu database trong docker-compose.yml
+Hoàn toàn có thể sử dụng Docker. Tuy nhiên, đợi phiên bản sau nha :)))
 
 ### 3. Enviroment Variables
 Sau đây là một số những variables cần thiết
@@ -24,7 +24,6 @@ Sau đây là một số những variables cần thiết
 |:-|:-|:-|
 |DATABASE_URL|URL để truy cập vào database||
 |DISCORD_TOKEN|Token của Discord Bot||
-|DISCORD_CLIENT_SECRET|Client Secret của Discord App|Optional|
 |PORT|Port của web||
 |HASH_KEY|Key để mã hóa|Có thể nhập bừa|
 
