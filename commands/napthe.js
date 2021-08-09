@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args) => {
                         database.query(`INSERT INTO s${message.guild.id} (ID,Coin) VALUE ('${message.member.id}','0')`)
                     }
                     axios({
-                        menthod: "post",
+                        method: "post",
                         url: "https://thesieutoc.net/chargingws/v2",
                         headers:{
                             "Content-Type": "Text/json",
