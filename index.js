@@ -19,9 +19,6 @@ const client = new Discord.Client()
 database = mysql.createConnection(process.env.CLEARDB_DATABASE_URL)
 app = express()
 
-
-
-
 database.connect(function (err) {
     if (err) {
         console.error('error connecting: ' + err.stack);
@@ -126,7 +123,6 @@ fs.readdir("./event/", (err, files) => {
         }
     });
 });
-
 
 app.use("/", require("./callback").route)
 
